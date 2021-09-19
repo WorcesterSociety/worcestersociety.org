@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>WSACS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-code"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>WSACS</h1>
+								<p style="font-size:24px">The Worcester Society for the <br>Advancement of Computing Sciences</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<p>The Worcester Society for the Advancement of Computing Sciences strongly believes in the advancement of computer science education by improving open-source knowledge. View the projects we've helped build on <a href="https://github.com/WorcesterSociety" target="_blank">our GitHub organization.</a>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/logo.png" alt="" style="max-width: 150px"  /></span>
+								<p>The Worcester Society for the Advancement of Computing Sciences was founded in late 2016 by a group of academically-driven computer science and applied mathematics students. Its primary purpose is to serve towards providing the next generation with the proper tools for prioritizing computer science in today's data-driven world. It aligns with our motto, "Scientia est pabulum," or in other words, "Knowledge is the food."</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<p style="text-align:center;">To get in touch, please send us an email at <a href="mailto:squad@worcestersociety.org">squad@worcestersociety.org</a>.<br>Or, find us on the Web.</p>
+								<ul class="icons" style="text-align:center;">
+									<li><a href="https://github.com/WorcesterSociety" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; 2021 WSACS</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg">
+				<div class="video-background">
+					<div class="video-foreground">
+					  <iframe id="ytplayer" src="https://www.youtube.com/embed/IGFKhiGSQBg?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&iv_load_policy=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		
+		<script>
+			              var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('ytplayer', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady() {
+            player.playVideo();
+            // Mute!
+            player.mute();
+        }
+		</script>
+
+	</body>
+</html>
