@@ -71,7 +71,7 @@
 			<div id="bg">
 				<div class="video-background">
 					<div class="video-foreground">
-					  <iframe id="ytplayer" src="https://www.youtube.com/embed/IGFKhiGSQBg?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&iv_load_policy=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+					  <iframe id="ytplayer" src="https://www.youtube.com/embed/IGFKhiGSQBg?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&iv_load_policy=3&enablejsapi=1&mute=1" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -94,7 +94,13 @@
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('ytplayer', {
                 events: {
-                    'onReady': onPlayerReady
+                    'onReady': onPlayerReady,
+		    'onStateChange': 
+    function(e) {
+        if (e.data === YT.PlayerState.ENDED) {
+            player.playVideo(); 
+        }
+    }
                 }
             });
         }
